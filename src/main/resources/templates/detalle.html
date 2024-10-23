@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Alumno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/detalle.css}">
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+<div class="detail-container">
+    <div class="card p-5 shadow-lg">
+        <h2 class="text-center mb-4">Detalle del Alumno</h2>
+        <form>
+            <div class="row mb-3">
+                <label for="codigo" class="col-sm-4 col-form-label">Código del Alumno:</label>
+                <div class="col-sm-8">
+                    <input type="text" id="codigo" name="codigo" class="form-control" th:value="${alumnoModel.codigo}" readonly>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="nombres" class="col-sm-4 col-form-label">Nombres:</label>
+                <div class="col-sm-8">
+                    <input type="text" id="nombres" name="nombres" class="form-control" th:value="${alumnoModel.nombre}" readonly>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="apellidos" class="col-sm-4 col-form-label">Apellidos:</label>
+                <div class="col-sm-8">
+                    <input type="text" id="apellidos" name="apellidos" class="form-control" th:value="${alumnoModel.apellido}" readonly>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="carrera" class="col-sm-4 col-form-label">Carrera:</label>
+                <div class="col-sm-8">
+                    <input type="text" id="carrera" name="carrera" class="form-control" th:value="${alumnoModel.carrera}" readonly>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="ciclo" class="col-sm-4 col-form-label">Ciclo:</label>
+                <div class="col-sm-8">
+                    <input type="text" id="ciclo" name="ciclo" class="form-control" th:value="${alumnoModel.ciclo}" readonly>
+                </div>
+            </div>
+        </form>
+        <div class="d-grid">
+            <a th:href="@{/busqueda/buscar}" class="btn btn-outline-primary">Regresar</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
